@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2EEEB"
+    tools:context=".ui.mantenimientos.MaintenanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:ems="10"
+                android:fontFamily="@font/aldrich"
+                android:hint="Fecha"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_km"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:ems="10"
+                android:fontFamily="@font/aldrich"
+                android:hint="Kms"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF" />
+
+            <Switch
+                android:id="@+id/sw_aceite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Aceite"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_filtroAceite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Filtro de aceite"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_filtroAire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Filtro de aire"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_bujia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Bujias"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_pastillasDelanteras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Pastilla de freno delanteras"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_pastillasTraseras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Pastilla de freno traseras"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_liquidoFrenos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Liquido de frenos"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Switch
+                android:id="@+id/sw_kitArrastre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/aldrich"
+                android:padding="8dp"
+                android:text="Kit de arrastre"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_otrosTrabajos"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:autoText="false"
+                android:background="@drawable/input_custom"
+                android:ems="10"
+                android:fontFamily="@font/aldrich"
+                android:gravity="start|top"
+                android:hint="Otros Trabajos"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B9FFFFFF"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnAddMant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:fontFamily="@font/aldrich"
+                android:shadowRadius="20"
+                android:text="Añadir"
+                app:cornerRadius="50dp" />
+
+            <TextView
+                android:id="@+id/textoPrueba"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="AQUÍ APARECERA EL OBJETO"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
