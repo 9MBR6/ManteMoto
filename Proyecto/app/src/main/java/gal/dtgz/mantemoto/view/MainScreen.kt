@@ -1,29 +1,50 @@
-package gal.dtgz.mantemoto.view
+package gal.dtgz.mantemoto.view.garaje
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
+import android.annotation.SuppressLint
+
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import gal.dtgz.mantemoto.R
 import gal.dtgz.mantemoto.navigation.AppScreens
 
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Esto es la Main Screen")
+    Scaffold(bottomBar = { MyBottomNavigation()}) {
     }
+}
+
+@Composable
+fun MyBottomNavigation() {
+
+    NavigationBar( windowInsets = NavigationBarDefaults.windowInsets ){
+        NavigationBarItem(selected = false , onClick = { /*TODO*/ }, icon = { Icon(
+            painter = painterResource(id = R.drawable.garaje),
+            contentDescription = "a"
+        )})
+        NavigationBarItem(selected = false , onClick = { /*TODO*/ }, icon = { Icon(
+            painter = painterResource(id = R.drawable.filtro_aceite),
+            contentDescription = "a"
+        )})
+        NavigationBarItem(selected = false , onClick = { /*TODO*/ }, icon = { Icon(
+            painter = painterResource(id = R.drawable.mantenimiento),
+            contentDescription = "a"
+        )})
+    }
+
 }
 
 @Preview
 @Composable
-fun MainScreenPrevew(){
+fun MainScreenPreview() {
     MainScreen()
 }

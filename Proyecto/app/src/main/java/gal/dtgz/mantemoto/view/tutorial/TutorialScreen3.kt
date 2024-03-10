@@ -16,13 +16,13 @@ import gal.dtgz.mantemoto.R
 import gal.dtgz.mantemoto.navigation.AppScreens
 
 @Composable
-fun TutorialScreen1(navController: NavHostController) {
+fun TutorialScreen3(navController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "TUTORIAL 1")
-        Button(onClick = { navController.navigate(AppScreens.TutorialScreen2.route) }) {
+        Text(text = "TUTORIAL 3")
+        Button(onClick = { navController.navigate(AppScreens.MainScreen.route)}) {
             Text(text = stringResource(id = R.string.Btn_Continuar))
         }
     }
@@ -30,7 +30,7 @@ fun TutorialScreen1(navController: NavHostController) {
 
 @Preview
 @Composable
-fun TutorialScreen1Preview() {
+fun TutorialScreen3Preview() {
     val navController = rememberNavController()
-    TutorialScreen1(navController)
+    TutorialScreen3(navController)
 }
