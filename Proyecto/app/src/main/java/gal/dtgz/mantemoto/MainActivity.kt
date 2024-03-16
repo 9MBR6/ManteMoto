@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import gal.dtgz.mantemoto.ui.feature.BotonFlotante
 import gal.dtgz.mantemoto.ui.theme.ManteMotoTheme
 import gal.dtgz.pruebascompose.components.BarraNavegacion
 import gal.dtgz.pruebascompose.navegation.NavNavegation
@@ -39,7 +40,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun PantallaPrincipal() {
     val navController = rememberNavController()
-    Scaffold(bottomBar = { BarraNavegacion(navController = navController) })
+    Scaffold(
+        bottomBar = { BarraNavegacion(navController = navController) },
+        floatingActionButton = { BotonFlotante() })
     { padding ->
         Box(
             modifier = Modifier
