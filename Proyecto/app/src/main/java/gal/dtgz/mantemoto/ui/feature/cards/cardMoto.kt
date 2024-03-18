@@ -1,4 +1,4 @@
-package gal.dtgz.mantemoto.ui.pruebas
+package gal.dtgz.mantemoto.ui.feature.cards
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
