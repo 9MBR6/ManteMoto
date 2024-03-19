@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import gal.dtgz.mantemoto.components.BarraSuperior
 import gal.dtgz.mantemoto.ui.feature.BotonFlotante
 import gal.dtgz.mantemoto.ui.theme.ManteMotoTheme
 import gal.dtgz.pruebascompose.components.BarraNavegacion
@@ -41,6 +42,7 @@ class MainActivity : ComponentActivity() {
 fun PantallaPrincipal() {
     val navController = rememberNavController()
     Scaffold(
+        topBar = {BarraSuperior(navController = navController)},
         bottomBar = { BarraNavegacion(navController = navController) },
         floatingActionButton = { BotonFlotante() })
     { padding ->

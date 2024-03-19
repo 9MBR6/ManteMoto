@@ -6,7 +6,6 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import gal.dtgz.pruebascompose.models.ItemsBottomNav
 import gal.dtgz.pruebascompose.navegation.currentRoute

@@ -17,10 +17,7 @@ import androidx.compose.ui.unit.sp
 fun SpareFeature() {
     Column(modifier = Modifier.fillMaxSize()) {
         Text(
-            text = "Spare Parts",
-            fontWeight = FontWeight.Bold,
-            style = TextStyle(fontSize = 32.sp),
-            modifier = Modifier.padding(start = 16.dp, top = 16.dp)
+            text = "Spare Parts"
         )
     }
 

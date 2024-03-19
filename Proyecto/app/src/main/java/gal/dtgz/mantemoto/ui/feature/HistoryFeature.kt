@@ -19,13 +19,6 @@ import gal.dtgz.mantemoto.ui.feature.cards.CardInfoHistory
 @Composable
 fun HistoryFeature() {
     Column(modifier = Modifier.fillMaxSize()) {
-        Text(
-            text = "History",
-            fontWeight = FontWeight.Bold,
-            style = TextStyle(fontSize = 32.sp),
-            modifier = Modifier.padding(start = 16.dp, top = 16.dp)
-        )
-
         Column(
             modifier = Modifier
                 .fillMaxSize()

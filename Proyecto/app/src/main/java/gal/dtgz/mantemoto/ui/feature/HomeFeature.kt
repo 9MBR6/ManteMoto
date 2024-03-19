@@ -23,13 +23,6 @@ import gal.dtgz.mantemoto.ui.feature.cards.CardInfoMoto
 @Composable
 fun HomeFeature() {
     Column(modifier = Modifier.fillMaxSize()) {
-            Text(
-                text = "My Garage",
-                fontWeight = FontWeight.Bold,
-                style = TextStyle(fontSize = 32.sp),
-                modifier = Modifier.padding(start = 16.dp, top = 16.dp)
-            )
-
         Column(
             modifier = Modifier
                 .fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally

@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import gal.dtgz.mantemoto.ui.feature.HistoryFeature
 import gal.dtgz.mantemoto.ui.feature.HomeFeature
+import gal.dtgz.mantemoto.ui.feature.SettingsFeature
 import gal.dtgz.mantemoto.ui.feature.SpareFeature
 
 @Composable
@@ -19,6 +20,9 @@ fun NavNavegation(navController: NavHostController) {
         }
         composable(NavScreen.HistoryScreen.name){
             HistoryFeature()
+        }
+        composable(NavScreen.SettingsFeature.name){
+            SettingsFeature()
         }
     }
 }

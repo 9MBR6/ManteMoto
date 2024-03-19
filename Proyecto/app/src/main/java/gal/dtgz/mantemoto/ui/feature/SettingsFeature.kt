@@ -12,6 +12,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,13 +29,6 @@ import gal.dtgz.mantemoto.R
 @Composable
 fun SettingsFeature() {
     Column(modifier = Modifier.fillMaxSize()) {
-        Text(
-            text = "Settings",
-            fontWeight = FontWeight.Bold,
-            style = TextStyle(fontSize = 32.sp),
-            modifier = Modifier.padding(start = 16.dp, top = 16.dp)
-        )
-
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -42,7 +36,7 @@ fun SettingsFeature() {
 
         ) {
             Divider(
-                color = Color.Blue,
+                color = MaterialTheme.colorScheme.primary,
                 thickness = 1.dp,
                 modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
             )
@@ -51,7 +45,7 @@ fun SettingsFeature() {
 
             InformacionCard()
             Divider(
-                color = Color.Blue,
+                color = MaterialTheme.colorScheme.primary,
                 thickness = 1.dp,
                 modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
             )
