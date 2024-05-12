@@ -97,6 +97,8 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
 
+    // LiveData
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
 
     //Default
     implementation("androidx.core:core-ktx:1.9.0")

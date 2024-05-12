@@ -7,17 +7,17 @@ import androidx.room.RoomDatabase
 import gal.dtgz.mantemoto.models.Moto
 
 @Database(entities = [Moto::class], version = 1, exportSchema = false)
-abstract class mantemoto : RoomDatabase() {
+abstract class Mantemoto : RoomDatabase() {
 
     abstract fun motoDAO(): MotoDAO
 
     companion object {
         @Volatile
-        private var Instance: mantemoto? = null
+        private var Instance: Mantemoto? = null
 
-        fun getDatabase(context: Context): mantemoto {
+        fun getDatabase(context: Context): Mantemoto {
             return Instance ?: synchronized(this) {
-                Room.databaseBuilder(context, mantemoto::class.java, "moto_database")
+                Room.databaseBuilder(context, Mantemoto::class.java, "moto_database")
                     .build()
                     .also { Instance = it }
             }
