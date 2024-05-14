@@ -17,9 +17,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import gal.dtgz.mantemoto.R
 
-@Preview
+
 @Composable
-fun CardInfoMoto() {
+fun CardInfoMoto(modelo: String, matricula: String, km:Int) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp
@@ -30,17 +30,19 @@ fun CardInfoMoto() {
         Column {
             Image(
                 painter = painterResource(id = R.drawable.imagen_moto),
-                contentDescription = "moto fulera de fran"
+                contentDescription = ""
             )
-            Column (modifier = Modifier.padding(start = 4.dp)){
+            Column(modifier = Modifier.padding(start = 4.dp)) {
                 Text(
-                    text = "MV Augusta Brutale 800",fontWeight = FontWeight.Bold,style = TextStyle(fontSize = 16.sp)
+                    text = modelo,
+                    fontWeight = FontWeight.Bold,
+                    style = TextStyle(fontSize = 16.sp)
                 )
                 Text(
-                    text = "KZK 1007"
+                    text = matricula
                 )
                 Text(
-                    text = "22.324 km"
+                    text = km.toString()
                 )
             }
 

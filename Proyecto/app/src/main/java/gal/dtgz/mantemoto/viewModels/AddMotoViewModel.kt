@@ -1,6 +1,5 @@
-package gal.dtgz.mantemoto.addMoto
+package gal.dtgz.mantemoto.viewModels
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

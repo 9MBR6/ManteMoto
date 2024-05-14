@@ -38,5 +38,5 @@ fun HistoryFeature() {
 @Preview
 @Composable
 fun HistoryFeaturePreview() {
-    HomeFeature()
+    //HomeFeature()
 }

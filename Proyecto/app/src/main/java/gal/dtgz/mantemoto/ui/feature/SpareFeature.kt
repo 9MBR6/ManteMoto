@@ -8,9 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import gal.dtgz.mantemoto.addMoto.AddMotoFeature
-import gal.dtgz.mantemoto.addMoto.AddMotoViewModel
+import gal.dtgz.mantemoto.viewModels.AddMotoViewModel
 import gal.dtgz.mantemoto.data.Mantemoto
-import gal.dtgz.mantemoto.data.MotoDAO
 
 @Preview
 @Composable
