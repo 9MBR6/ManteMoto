@@ -5,5 +5,8 @@ enum class NavScreen {
     SpareScreen,
     HistoryScreen,
     SettingsScreen,
-    AddMotoScreen
+    AddMotoScreen,
+    AddSpareFeature,
+    AddMaintenanceFeature,
+    EditMotoFeature
 }

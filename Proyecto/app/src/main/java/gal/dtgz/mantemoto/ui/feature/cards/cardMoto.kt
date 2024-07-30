@@ -19,7 +19,7 @@ import gal.dtgz.mantemoto.R
 
 
 @Composable
-fun CardInfoMoto(modelo: String, matricula: String, km:Int) {
+fun CardInfoMoto(modelo: String, matricula: String, km:String,onClick: () -> Unit) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
             defaultElevation = 6.dp

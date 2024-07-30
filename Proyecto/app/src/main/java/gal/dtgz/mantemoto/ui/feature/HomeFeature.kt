@@ -53,23 +53,13 @@ fun BodyHome(homeViewModel: HomeViewModel){
             ) {
 
                 items(listaDeMotos) { moto ->
-                    CardInfoMoto(moto.modelo,moto.matricula,moto.km)
+                    CardInfoMoto(moto.modelo,moto.matricula,moto.km, onClick = {})
                 }
-
             }
         }
     }
 }
 
-@Composable
-fun BotonFlotante(navController: NavController) {
-    FloatingActionButton(
-        onClick = { navController.navigate(NavScreen.AddMotoScreen.name) },
-    ) {
-        Icon(Icons.Filled.Add, "Small floating action button.")
-    }
-
-}
 
 @Preview
 @Composable

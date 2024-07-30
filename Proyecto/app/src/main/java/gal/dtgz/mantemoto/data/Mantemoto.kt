@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import gal.dtgz.mantemoto.models.Moto
 
-@Database(entities = [Moto::class], version = 1, exportSchema = false)
+@Database(entities = [Moto::class], version = 2, exportSchema = false)
 abstract class Mantemoto : RoomDatabase() {
 
     abstract fun motoDAO(): MotoDAO
@@ -18,6 +18,7 @@ abstract class Mantemoto : RoomDatabase() {
         fun getDatabase(context: Context): Mantemoto {
             return Instance ?: synchronized(this) {
                 Room.databaseBuilder(context, Mantemoto::class.java, "moto_database")
+                    .fallbackToDestructiveMigration()
                     .build()
                     .also { Instance = it }
             }

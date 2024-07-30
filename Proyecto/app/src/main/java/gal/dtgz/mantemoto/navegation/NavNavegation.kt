@@ -4,7 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import gal.dtgz.mantemoto.ui.feature.AddMaintenanceFeature
 import gal.dtgz.mantemoto.ui.feature.AddMotoFeature
+import gal.dtgz.mantemoto.ui.feature.AddSpareFeature
+import gal.dtgz.mantemoto.ui.feature.EditMotoFeature
 import gal.dtgz.mantemoto.ui.feature.HistoryFeature
 import gal.dtgz.mantemoto.ui.feature.HomeFeature
 import gal.dtgz.mantemoto.ui.feature.SettingsFeature
@@ -28,5 +31,15 @@ fun NavNavegation(navController: NavHostController) {
         composable(NavScreen.AddMotoScreen.name){
             AddMotoFeature()
         }
+        composable(NavScreen.AddMaintenanceFeature.name){
+            AddMaintenanceFeature()
+        }
+        composable(NavScreen.AddSpareFeature.name){
+            AddSpareFeature()
+        }
+        composable(NavScreen.EditMotoFeature.name){
+            EditMotoFeature()
+        }
+
     }
 }

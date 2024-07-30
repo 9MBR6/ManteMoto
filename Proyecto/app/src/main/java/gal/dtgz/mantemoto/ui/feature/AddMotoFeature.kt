@@ -14,8 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import gal.dtgz.mantemoto.data.Mantemoto
 import gal.dtgz.mantemoto.viewModels.AddMotoViewModel
+import gal.dtgz.pruebascompose.navegation.NavScreen
 
 
 /**

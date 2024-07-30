@@ -10,16 +10,16 @@ import androidx.compose.ui.tooling.preview.Preview
 
 
 @Composable
-fun AddMaintenanceFeature() {
+fun AddSpareFeature() {
     Column(modifier = Modifier.fillMaxSize()) {
         Text(
-            text = "ADD MANTENIMIENTO"
+            text = "ADD SPARE"
         )
     }
 }
 
 @Preview
 @Composable
-fun AddMaintenanceFeaturePreview() {
+fun AddSpareFeaturePreview() {
     AddMaintenanceFeature()
 }

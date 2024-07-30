@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import gal.dtgz.mantemoto.components.BarraSuperior
-import gal.dtgz.mantemoto.ui.feature.BotonFlotante
+import gal.dtgz.mantemoto.navegation.BotonFlotante
 import gal.dtgz.mantemoto.ui.theme.ManteMotoTheme
 import gal.dtgz.pruebascompose.components.BarraNavegacion
 import gal.dtgz.pruebascompose.navegation.NavNavegation
@@ -25,7 +25,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ManteMotoTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -44,7 +43,9 @@ fun PantallaPrincipal() {
     Scaffold(
         topBar = {BarraSuperior(navController = navController)},
         bottomBar = { BarraNavegacion(navController = navController) },
-        floatingActionButton = { BotonFlotante(navController = navController) })
+        floatingActionButton = {
+            BotonFlotante(navController = navController)
+        })
     { padding ->
         Box(
             modifier = Modifier
