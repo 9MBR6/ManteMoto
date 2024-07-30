@@ -23,6 +23,4 @@ interface MotoDAO {
     suspend fun delete(moto: Moto)
     @Query("SELECT COUNT(*) FROM motos")
     suspend fun getCount(): Int
-
-
 }

@@ -11,25 +11,36 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import gal.dtgz.mantemoto.data.Mantemoto
+import gal.dtgz.mantemoto.data.MotoDAO
 import gal.dtgz.mantemoto.ui.feature.cards.CardInfoMoto
 import gal.dtgz.mantemoto.viewModels.HomeViewModel
+import gal.dtgz.pruebascompose.navegation.NavScreen
 
 @Composable
 fun HomeFeature() {
     var bd = Mantemoto.getDatabase(LocalContext.current)
-    val viewModel = HomeViewModel(bd.motoDAO())
+    var viewModel = HomeViewModel(bd.motoDAO())
     BodyHome(viewModel)
 }
 
 @Composable
 fun BodyHome(homeViewModel: HomeViewModel){
-    val listaDeMotos = homeViewModel.obtenerTodasLasMotos();
+
+    LaunchedEffect(Unit) {
+        homeViewModel.obtenerTodasLasMotos()
+    }
+
+    val listaDeMotos by homeViewModel.motos.observeAsState(emptyList())
 
     Column(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -51,9 +62,9 @@ fun BodyHome(homeViewModel: HomeViewModel){
 }
 
 @Composable
-fun BotonFlotante() {
+fun BotonFlotante(navController: NavController) {
     FloatingActionButton(
-        onClick = { /*TODO*/ },
+        onClick = { navController.navigate(NavScreen.AddMotoScreen.name) },
     ) {
         Icon(Icons.Filled.Add, "Small floating action button.")
     }
@@ -63,5 +74,6 @@ fun BotonFlotante() {
 @Preview
 @Composable
 fun HomeFeaturePreview() {
-    //HomeFeature()
+    HomeFeature()
 }
+

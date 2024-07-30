@@ -44,7 +44,7 @@ fun PantallaPrincipal() {
     Scaffold(
         topBar = {BarraSuperior(navController = navController)},
         bottomBar = { BarraNavegacion(navController = navController) },
-        floatingActionButton = { BotonFlotante() })
+        floatingActionButton = { BotonFlotante(navController = navController) })
     { padding ->
         Box(
             modifier = Modifier

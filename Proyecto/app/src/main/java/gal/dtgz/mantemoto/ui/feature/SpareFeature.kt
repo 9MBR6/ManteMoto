@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import gal.dtgz.mantemoto.addMoto.AddMotoFeature
 import gal.dtgz.mantemoto.viewModels.AddMotoViewModel
 import gal.dtgz.mantemoto.data.Mantemoto
 
@@ -18,9 +17,6 @@ fun SpareFeature() {
         Text(
             text = "Spare Parts"
         )
-       var bd = Mantemoto.getDatabase(LocalContext.current)
-        val viewModel = AddMotoViewModel(bd.motoDAO())
-        AddMotoFeature(viewModel)
     }
 
 }

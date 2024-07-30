@@ -1,4 +1,4 @@
-package gal.dtgz.mantemoto.addMoto
+package gal.dtgz.mantemoto.ui.feature
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,8 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import gal.dtgz.mantemoto.data.Mantemoto
 import gal.dtgz.mantemoto.viewModels.AddMotoViewModel
 
 
@@ -22,13 +24,19 @@ import gal.dtgz.mantemoto.viewModels.AddMotoViewModel
  * **/
 
 @Composable
-fun AddMotoFeature(addMotoViewModel: AddMotoViewModel) {
+fun AddMotoFeature() {
+    var bd = Mantemoto.getDatabase(LocalContext.current)
+    val viewModel = AddMotoViewModel(bd.motoDAO())
+
     Column(modifier = Modifier.fillMaxSize()) {
-        RegisterMatricula(addMotoViewModel)
-        RegisterMarca(addMotoViewModel)
-        RegisterModelo(addMotoViewModel)
-        RegisterKM(addMotoViewModel)
-        RegisterBoton(addMotoViewModel)
+        Text(
+            text = "Add Moto"
+        )
+        RegisterMatricula(viewModel)
+        RegisterMarca(viewModel)
+        RegisterModelo(viewModel)
+        RegisterKM(viewModel)
+        RegisterBoton(viewModel)
     }
 }
 
@@ -90,6 +98,6 @@ fun RegisterBoton(addMotoViewModel: AddMotoViewModel) {
 @Preview
 @Composable
 fun AddMotoFeaturePreview() {
-    //AddMotoFeature()
+    AddMotoFeature()
 }
 

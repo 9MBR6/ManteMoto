@@ -11,7 +11,7 @@ sealed class ItemsTopNav(
 ) {
 
     object ItemSettings :
-        ItemsTopNav("Settings", NavScreen.SettingsFeature.name)
+        ItemsTopNav("Settings", NavScreen.SettingsScreen.name)
 
 
 }
